@@ -1,11 +1,11 @@
 public class Pokemon {
     //declaration des proprietes qui seront heritees ensuite j'ai mis le modificateur d'acces sur protected pour que les classes nom pokemon vont heriter ces proprietes
 
-    protected String nom;
-    protected String type;
-    protected Integer point_vie;
-    protected String cri;
-    protected String attaque;
+    protected static String nom;
+    protected static String type;
+    protected static Integer point_vie;
+    protected static String cri;
+    protected static String attaque;
 
 
     //initialisation des avec un constructeur
@@ -16,6 +16,7 @@ public class Pokemon {
         this.cri = cri;
         this.attaque = attaque;
     }
+
 
 }
 
