@@ -1,26 +1,37 @@
 public class main {
 
+
+
+    public static void affichageObjet(Object object) {
+        System.out.println(object.toString());
+    }
+
     public static void main(String[] args) {
-        affichage();
-
-        //creation une instance (un objet raavus)
-        Ravuus ravuus = new Ravuus("RAVUUS", "humain", 100, "Ravuuuuuuuuuus", "stream");
-        ravAffichage();
-    }
-
-    public static void affichage() {
-        System.out.println("salut c'est la fonction systemeoutprint ");
-        System.out.println("salut c'est la println");
-    }
 
 
+        //test d'affichage
+        //creation d'une instance (un objet raavus)
+        Ravuus ravuus = new Ravuus("RAVUUS", "humain", 100, "Ravuuuuuuuuuus", 56);
 
-    public static void ravAffichage(){
-        System.out.println("Nom : " + Ravuus.nom);
-        System.out.println("Type : " + Ravuus.type);
-        System.out.println("Point de vie : " + Ravuus.point_vie);
-        System.out.println("Cri : " + Ravuus.cri);
-        System.out.println("Attaque : " + Ravuus.attaque);
+        //creatoin d'une instance pour rhinastoc
+        Rhinastoc rhinastoc = new Rhinastoc("Rhinastoc", "sol", 100, "rhina rhina", 41);
+
+        //creation objet bataille
+        Bataille bataille = new Bataille("navarine", ravuus, rhinastoc);
+
+        System.out.println("PRESENTATION DES POKEMONS ");
+        System.out.println("\n\n");
+
+
+//appeler la bataille
+        bataille.combat();
+
+//affichage de mes pokemons
+        System.out.println(rhinastoc.toString());
+        affichageObjet(ravuus);
+        System.out.println("la bataille navarine:");
+        affichageObjet(bataille);
+
     }
 
 
